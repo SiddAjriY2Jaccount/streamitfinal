@@ -27,7 +27,7 @@ class Songs(models.Model):
     albumlogo = models.CharField(max_length=100)
     releasedate = models.DateField()
     genre = models.CharField(max_length=100)
-    
+
     def __str__(self):
         return self.songtitle + ' by ' + self.artist
 #class VideoDetails(models.Model):
@@ -37,6 +37,6 @@ class Songs(models.Model):
 #    songid = models.ForeignKey(Songs, max_length=1000)
 
 class SongDetails(models.Model):
-    songid = models.ForeignKey(Songs, on_delete=models.CASCADE)
+    songid = models.ForeignKey(Songs, on_delete=models.CASCADE, primary_key = True)
     songhits = models.IntegerField()
     #is_favourite = models.BooleanField(default=False)
