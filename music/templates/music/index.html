@@ -1,0 +1,15 @@
+{% if all_songs %}
+
+
+ <h2> HERE ARE THE SONGS ON STREAMIT </h2>
+  <ul>
+    {% for song in all_songs %}
+        <li><a href="{% url 'music:detail' song.songid %}">{{ song.songtitle }}</a></li>
+    {% endfor %}
+  </ul>
+{% else %}
+    <h3>You don't have any albums</h3>
+{% endif %}
+
+
+<!-- /music/{{ song.songid } -->
