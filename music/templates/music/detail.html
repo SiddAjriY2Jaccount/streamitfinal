@@ -1,6 +1,13 @@
-<img src="{{song.albumlogo}}">
+{% extends 'music/base.html' %}
+{% block title %}Songs{% endblock %}
 
-<h1>{{song.songtitle}}</h1>
-<h2>Artist : {{song.artist}}</h2>
-<h3>Album : {{song.albumtitle}}</h3>
-<!--<h4>Hits : {{song_play.songhits}}</h4>-->
+{% block body %}
+
+    <img src="{{song.albumlogo}}">
+
+    <h1>{{song.songtitle}}</h1>
+    <h2>Artist : {{song.artist}}</h2>
+    <h3>Album : {{song.albumtitle}}</h3>
+    <!--<h4>Hits : {{song_play.songhits}}</h4>-->
+
+{% endblock %}
